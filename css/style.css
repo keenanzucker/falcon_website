@@ -1,5 +1,25 @@
 body {
     padding-top: 70px;
+    background-color: #C3C3C3;
+    background: url("../images/mountain.PNG") no-repeat;
+    background-size: 100%;
+}	
+
+h1 {
+	font-size: 100px;
 }
 
+h2 {
+	font-size: 60px;
+}
 
+img {
+    position: relative;
+    float: left;
+    width:  200px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
