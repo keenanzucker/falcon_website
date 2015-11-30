@@ -1,91 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Falcon</title>
+<meta name="description" content="">
+<meta name="author" content="">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<!-- Favicons
+    ================================================== -->
+<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
 
-    <title>Falcon</title>
+<!-- Bootstrap -->
+<link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Slider
+    ================================================== -->
+<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
+<link href="css/owl.theme.css" rel="stylesheet" media="screen">
 
-    <!-- Custom Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+<!-- Stylesheet
+    ================================================== -->
+<link rel="stylesheet" type="text/css"  href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+<link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,300' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800,600,300' rel='stylesheet' type='text/css'>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+
 </head>
-
 <body>
+<!-- Navigation
+    ==========================================-->
+<nav id="menu" class="navbar navbar-default navbar-fixed-top">
+  <div class="container"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <a class="navbar-brand" href="index.html">Falcon</a> </div>
+    
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#home" class="page-scroll">Home</a></li>
+        <li><a href="#about-section" class="page-scroll">About</a></li>
+        <li><a href="#team-section" class="page-scroll">Team</a></li>
+        <li>
+            <a class="dropdown dropdown-toggle" data-toggle="dropdown">Subsystems</a>
+              <ul class="dropdown-menu">
+                <li><a href="mechanical.html">Mechanical</a></li>
+                <li><a href="electrical.html">Electrical</a></li>
+                <li><a href="software.html">Software</a></li>
+              </ul>
+        </li>
+        <li><a href="https://medium.com/principles-of-engineering-skycam" class="page-scroll">Blog</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse --> 
+  </div>
+  <!-- /.container-fluid --> 
+</nav>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">Falcon</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a class="dropdown dropdown-toggle" data-toggle="dropdown">Subsystems</a>
-                          <ul class="dropdown-menu">
-                            <li><a href="mechanical.html">Mechanical</a></li>
-                            <li><a href="electrical.html">Electrical</a></li>
-                            <li><a href="software.html">Software</a></li>
-                          </ul>
-                    </li>
-                    <li>
-                        <a href="about.html">Team</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<!-- Header -->
+<header class="text-center" name="home">
+  <div class="intro-text">
+    <h1>This is <span class="color">Falcon</span></h1>
+    <!-- <h4 style="color:#000000">We are a team of five Olin students developing a cable-suspended camera system for our Principles of Engineering class</h4> -->
+</header>
+<!-- About Section -->
+<div id="about-section">
+  <div class="container">
+      <div class="section-title">
+    <h2>Our <strong>Project</strong></h2>
+    <div class="clearfix"></div>
+          <p>For our Principles of Engineering final project, we decided to build a unique cable-suspended camera system. The idea is similar to a Skycam which is flown above popular sporting events on a stadium scale. However, a smaller, room-sized version of a cable-suspended camera is a untapped market. Recently, the market for amateur filmmakers has increased dramatically. Drones are becoming popular for outdoor and landscape footage. However, an indoor alternative for smooth and downwards footage is non-existent. Our aim to change that! We welcome you to explore our camera system we proudly call Falcon.</p>
+    <br>
+    <br>
 
-    <!-- Page Content -->
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h1>Falcon </h1>
-                <h2>A Principles of Engineering Project</h2>
-                <p>Hello! This is the website for documenting and presenting our Principles of Engineering project: Falcon! We wanted to bring the steady and unique footage of a large scale setup like the Skycam to the consumer level. We envision Falcon to be a room-sized, cable-suspended camera system able of providing different angles and shots never achievable before indoors without large rigs or cranes.  </p>
-                <script async src="https://static.medium.com/embed.js"></script><a class="m-story" data-collapsed="true" href="https://medium.com/principles-of-engineering-skycam/let-s-do-this-42038c5a3221">Let’s do this!</a>
-            </div>
-        </div>
-
-        <div class="row">
-            <h3>Budget Breakdown can be seen here:</h3>
-        </div>
 
     </div>
-    <!-- /.container -->
+  </div>
+  <div class="container">
+    <div class="section-title">
+      <h2>Our <strong>Subsystems</strong></h2>
 
-                    
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div class="space"></div>
+    <div class="row">
+      <div class="col-md-4"> <i class="fa fa-gears"></i>
+        <h4>Mechanical</h4>
+        <p>We designed and fabricated a mechanical system. We used ClearPath servo motors and a unique spooling system.</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-bolt"></i>
+        <h4>Electrical</h4>
+        <p>We used three RN-41 Bluetooth modules and well as three Arduino's to send/recieve commands from our Rasberry Pi master node.</p>
+      </div>
+      <div class="col-md-4"> <i class="fa fa-code"></i>
+        <h4>Software</h4>
+        <p>We wrote Arduino C code as well as a Python script to control our motors and flightpaths.</p>
+      </div>
+    </div>
+  </div>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+</div>
+<!-- Team Section -->
+<div id="team-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Our <strong>Team</strong></h2>
+      <hr>
+      <div class="clearfix"></div>
+    </div>
+    <div id="row" >
+    <div class="col-md-1"></div>
+      <div class="col-md-2 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/brennan.jpg" alt="..." class="img-circle team-img">
+          <div class="caption">
+            <h3>Brennan</h3>
+            <p>Can we buy a mountain?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/keenan.jpg" alt="..." class="img-circle team-img">
+          <div class="caption">
+            <h3>Keenan</h3>
+            <p>How is he an R2?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/nur.jpg" alt="..." class="img-circle team-img">
+          <div class="caption">
+            <h3>Nur</h3>
+            <p>I'll Shlapo you!</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/patrick.jpg" alt="..." class="img-circle team-img">
+          <div class="caption">
+            <h3>Patrick</h3>
+            <p>Have you seen my prox?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-2 col-sm-6 team">
+        <div class="thumbnail"> <img src="img/team/walker.jpg" alt="..." class="img-circle team-img">
+          <div class="caption">
+            <h3>Walker</h3>
+            <p>Wanna see my loft?</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+    </div>
+  </div>
+</div>
 
-    <!-- Medium Blog embedding for documentation -->
-    <script async src="https://static.medium.com/embed.js"></script>
+<div id="footer">
+  <div class="container">
+    <p>Copyright &copy; 2015 Falcon || Olin College of Engineering</p>
+  </div>
+</div>
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> 
+<script type="text/javascript" src="js/jquery.1.11.1.js"></script> 
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script type="text/javascript" src="js/bootstrap.js"></script> 
+<script type="text/javascript" src="js/SmoothScroll.js"></script> 
+<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
+<script type="text/javascript" src="js/jquery.isotope.js"></script> 
+<script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
+<script type="text/javascript" src="js/contact_me.js"></script> 
+<script type="text/javascript" src="js/owl.carousel.js"></script> 
+
+<!-- Javascripts
+    ================================================== --> 
+<script type="text/javascript" src="js/main.js"></script>
 </body>
-
 </html>
