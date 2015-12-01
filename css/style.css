@@ -279,5 +279,20 @@ img.img-circle.team-img {
 
 .subsystem-container {
 	padding: 10%;
+}
 
+/*Blog Pages*/
+
+.blog-container {
+	padding: 5%;
+}
+
+.blog-intro{
+	font-size: 24px;
+}
+
+.story {
+	padding:2%;
+	height: 200px;
+	
 }
