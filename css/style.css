@@ -75,9 +75,9 @@ hr {
 }
 #menu a.navbar-brand {
 	text-transform: uppercase;
-	font-size: 22px;
+	font-size: 28px;
 	color: #878d8f;
-	font-weight: 700;
+	font-weight: 800;
 }
 #menu a.navbar-brand i.fa {
 	color: #88bb45;
@@ -85,11 +85,11 @@ hr {
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #737373;  							/*Navbar Font Color*/
-	font-size: 12px;
+	font-size: 16px;
 	letter-spacing: 1px;
 }
 #menu.navbar-default .navbar-nav > li > a:hover {
-	color: #fff;
+	color: #FF00FF;
 }
 .on {
 	background-color: #222222 !important;
@@ -162,11 +162,14 @@ header p {
 /* About Section */
 #about-section {
 	padding: 100px 0;
-	background-color: #86E2D5;
+	background-color: #c8c8c8;
 	color: #43716a;
 }
 #about-section h2 {
-	color: #dbf6f2;
+	color: #ffffff;
+}
+#about-section h4 {
+	color: #ffffff;
 }
 #about-section .section-title hr {
 	margin-bottom: 30px;
@@ -190,7 +193,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4e9e0', end
 	font-size: 22px;
 	margin-top: 20px;
 	margin-bottom: 30px;
-	color: #57938b;
+	color: #2F4F4F;
 }
 /* Team Section */
 #team-section {
@@ -204,35 +207,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4e9e0', end
 	font-size: 40px;
 	font-weight: 300;
 	margin-bottom: 20px;
-	color: #c5c6c6;
+	color: #2F4F4F;
 }
 .section-title hr {
-	height: 2px;
-	width: 50%;
 	float: left;
 	position: relative;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e3e5e5+0,ffffff+100&amp;1+0,0+100 */
-	background: -moz-linear-gradient(left, rgba(227,229,229,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(227,229,229,1)), color-stop(100%, rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(227,229,229,1) 0%, rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(227,229,229,1) 0%, rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(227,229,229,1) 0%, rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(227,229,229,1) 0%, rgba(255,255,255,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3e5e5', endColorstr='#00ffffff', GradientType=1 ); /* IE6-9 */
-	border: 0;
 	margin-bottom: 50px;
 }
 #team-section .item {
 	padding: 0;
-	margin: 15px;
 }
 img.img-circle.team-img {
-	width: 120px;
-	height: 120px;
+	width: 150px;
+	height: 150px;
 	border: 0;
 	transition: all 0.5s;
 	margin: 0;
-	box-shadow: -3px -3px #86E2D5;
+	box-shadow: 1px 1px #FF00FF;
 }
 #team-section .thumbnail {
 	background: transparent;
@@ -293,6 +284,14 @@ img.img-circle.team-img {
 
 .story {
 	padding:2%;
-	height: 200px;
-	
+	/*height: 200px;*/
+}
+
+.budget-section {
+	padding: 5%;
+}
+
+.budget-sheet {
+	width:100%;
+	height: 500px;
 }
