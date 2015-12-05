@@ -171,17 +171,8 @@ header p {
 #about-section h4 {
 	color: #ffffff;
 }
-#about-section .section-title hr {
-	margin-bottom: 30px;
-	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#a4e9e0+0,ffffff+100&amp;1+0,0+100 */
-	background: -moz-linear-gradient(left, rgba(164,233,224,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
-	background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(164,233,224,1)), color-stop(100%, rgba(255,255,255,0))); /* Chrome,Safari4+ */
-	background: -webkit-linear-gradient(left, rgba(164,233,224,1) 0%, rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
-	background: -o-linear-gradient(left, rgba(164,233,224,1) 0%, rgba(255,255,255,0) 100%); /* Opera 11.10+ */
-	background: -ms-linear-gradient(left, rgba(164,233,224,1) 0%, rgba(255,255,255,0) 100%); /* IE10+ */
-	background: linear-gradient(to right, rgba(164,233,224,1) 0%, rgba(255,255,255,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4e9e0', endColorstr='#00ffffff', GradientType=1 ); /* IE6-9 */
-}
+
+
 #about-section i {
 	float: left;
 	display: block;
@@ -223,7 +214,6 @@ img.img-circle.team-img {
 	border: 0;
 	transition: all 0.5s;
 	margin: 0;
-	box-shadow: 1px 1px #FF00FF;
 }
 #team-section .thumbnail {
 	background: transparent;
@@ -232,27 +222,7 @@ img.img-circle.team-img {
 #team-section .thumbnail .caption {
 	padding: 9px;
 }
-.owl-theme .owl-controls .owl-page span {
-	display: block;
-	width: 10px;
-	height: 10px;
-	margin: 5px 7px;
-	filter: Alpha(Opacity=1);
-	opacity: 1;
-	-webkit-border-radius: 0;
-	-moz-border-radius: 20px;
-	border-radius: 50%;
-	background: #e1f8f4;
-	transition: all 0.5s;
-}
-.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
-	filter: Alpha(Opacity=100);
-	opacity: 1;
-	background: #78cbbf;
-}
-.owl-theme .owl-controls .owl-page.active span {
-	background: #78cbbf;
-}
+
 /* Footer */
 #footer {
 	background-color: #222222;
