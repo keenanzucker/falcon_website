@@ -111,6 +111,14 @@ hr {
 }
 
 /* Home Style */
+.hero-image {
+	border-radius: 2%;
+}
+
+ .hero-caption {
+	text-align: center;
+}
+
 header {
 	background: url(../img/SlideBackgroundWire2.png) no-repeat center;
 	background-size: cover;
