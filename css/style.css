@@ -168,6 +168,19 @@ header p {
 	color: #fff;
 }
 /* About Section */
+
+.about-button {
+
+	text-align: center;
+	padding-left: 35%;
+	padding-right: 35%;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3px;
+	font-size: 18px;
+
+}
+
 #about-section {
 	padding: 100px 0;
 	background-color: #c8c8c8;
@@ -179,7 +192,6 @@ header p {
 #about-section h4 {
 	color: #ffffff;
 }
-
 
 #about-section i {
 	float: left;
