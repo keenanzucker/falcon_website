@@ -168,6 +168,19 @@ header p {
 	color: #fff;
 }
 /* About Section */
+
+.about-button {
+
+	text-align: center;
+	padding-left: 15%;
+	padding-right: 15%;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3px;
+	font-size: 18px;
+
+}
+
 #about-section {
 	padding: 100px 0;
 	background-color: #c8c8c8;
@@ -179,7 +192,6 @@ header p {
 #about-section h4 {
 	color: #ffffff;
 }
-
 
 #about-section i {
 	float: left;
@@ -249,6 +261,31 @@ img.img-circle.team-img {
 
 .subsystem-container {
 	padding: 10%;
+}
+
+.sub-content {
+	padding-top: 5%;
+	padding-bottom: 5%;
+}
+
+.sub-image {
+	/*padding: 5%;*/
+	width: 300px;
+	height: auto;
+}
+
+.new-row {
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.sub-button {
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 3%;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-size: 24px;
 }
 
 /*Blog Pages*/

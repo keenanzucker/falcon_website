@@ -18,11 +18,6 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Slider
-    ================================================== -->
-<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-<link href="css/owl.theme.css" rel="stylesheet" media="screen">
-
 <!-- Stylesheet
     ================================================== -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
@@ -38,12 +33,10 @@
     ==========================================-->
 <nav id="menu" class="navbar navbar-default navbar-fixed-top">
   <div class="container"> 
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Falcon</a> </div>
     
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">Home</a></li>
@@ -60,9 +53,7 @@
         <li><a href="blog.html" class="page-scroll">Blog</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
   </div>
-  <!-- /.container-fluid --> 
 </nav>
 
 <!-- Header -->
@@ -71,15 +62,60 @@
     <h1>Software</h1>
     </div>
 </header>
-<!-- About Section -->
+
   <div class="container">
     <div class="subsystem-container">
       <div class="section-title">
         <h2>Specifications</h2>
-          <p>Engineering Things about software! Engineering Things about software! Engineering Things about software!</p>
-          <p>Engineering Things about software! Engineering Things about software! Engineering Things about software!</p>
-          <p>Engineering Things about software! Engineering Things about software! Engineering Things about software!</p>
+          <div class="col-md-6">
+            <h4>Arduino C</h4>
+            <p>Our Arduino program acts as the interpreter between the computer and the servo motors. It opens bluetooth communication, which allows our Python script to send commands wirelessly, and then translates those commands into pulsing signals that our servo motors can interpret.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/electrical/rn41.jpg" class="sub-image">
+          </div>
+          <div class="col-md-6">
+            <img src="img/electrical/rn41.jpg" class="sub-image">
+          </div>
+
+          <div class="col-md-6">
+          <h4>Servo Control</h4>
+            <p>Our servo motors are controlled by a series of pulses sent within a preprogrammed frequency range of _____. In this mode, called Pulse-Burst Positioning, each pulse sent moves the servo at a preprogrammed resolution of 800 steps per revolution. If multiple pulses are sent in fast succession, the servos internally chain these commands together to create a longer movement. Internally, the servos calculate acceleration and velocity profiles to create a smooth, controlled movement. The final control line involved in controlling our servos is an alternate speed control. When a series of pulses is accompanied by a brief pulse of this control line, the servos will perform the action at a second predetermined max velocity. </p>
+
+            <p>Our control scripts leverage the features described above to create a smooth, controlled movement with finely orchestrated motion among all of the servos. </p>
+          </div>
+
+          <div class="row">
+            <div class="col-md-8">
+              <h4>Python</h4>
+              <p>Our Python code performs all of our control and navigation operations. We have mapped user input to a number of methods which perform.</p>
+              <h4>Scripted Connectivity</h4>
+              <p>To create a smoother Linux user experience, we’ve created a Bluetooth configuration file along with a Python method automatically be run to connect a user’s computer to the Bluetooth modules located on each node. </p>
+            </div>
+            <div class="col-md-4">
+              <img src="img/electrical/rn41.jpg" class="sub-image">
+            </div>
+          </div>
+          
+          <div class="row">
+             <div class="col-md-4">
+              <img src="img/electrical/rn41.jpg" class="sub-image">
+            </div>
+            <div class="col-md-8">
+              <h4>Path Generation</h4>
+              <p>To implement our Waypoint control scheme, we allow the user to input an arbitrary number of waypoints they wish the camera to traverse. Our software uses Scipy’s interpolation library to generate a spline through the given coordinates, and in order to achieve a smooth flight path, we then need to recreate the spline as a list of equidistant points. We use a binary search and solver to track along our generated curve and determine appropriate coordinates. The distance, as well as the tolerance of our search, can be set by the user. Every path we create is stored in a Path object, which encodes a list of coordinates, as well as more useful information such as the node spool lengths, and change in node lengths for any given point. When a user attempts to initialize a new Path, our software also determines if any point falls outside of the physical boundaries of our system, and will initialize that Path as a null object, preventing a user from moving to an illegal location. </p>
+            </div>
+
+          </div>
+
+
+
       </div>
+
+      <div>
+        <a href="https://github.com/phuston/falcon" class="sub-button">GitHub Repo</a>
+      </div>
+
     </div>
   </div>
 
@@ -97,11 +133,8 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.js"></script> 
 
 <!-- Javascripts
     ================================================== --> 

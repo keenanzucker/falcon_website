@@ -18,12 +18,8 @@
 <link rel="stylesheet" type="text/css"  href="css/bootstrap.css">
 <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.css">
 
-<!-- Slider
-    ================================================== -->
-<link href="css/owl.carousel.css" rel="stylesheet" media="screen">
-<link href="css/owl.theme.css" rel="stylesheet" media="screen">
 
-<!-- Stylesheet
+<!-- Stylesheets
     ================================================== -->
 <link rel="stylesheet" type="text/css"  href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/responsive.css">
@@ -43,7 +39,6 @@
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
       <a class="navbar-brand" href="index.html">Falcon</a> </div>
     
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a href="index.html">Home</a></li>
@@ -60,9 +55,7 @@
         <li><a href="blog.html" class="page-scroll">Blog</a></li>
       </ul>
     </div>
-    <!-- /.navbar-collapse --> 
   </div>
-  <!-- /.container-fluid --> 
 </nav>
 
 <!-- Header -->
@@ -71,21 +64,44 @@
     <h1>Electrical</h1>
     </div>
 </header>
-<!-- About Section -->
+
+
   <div class="container">
     <div class="subsystem-container">
       <div class="section-title">
         <h2>Specifications</h2>
           <p>The electrical system of Falcon is composed of 2 main components - motor control and wireless communications. </p>
-          <h4>Motor Control</h4>
-          <p>Using the clearpath motors in Pulse Burst Positioning mode, the ClearPath motors move a distance proportional to the number of pulses sent to the motor’s input. To move the motors a known distance, a variable number of pulses is sent to the motor, where each pulse moves the shaft 1/800th of a revolution. The ClearPath internally calculates trajectories and acceleration profiles, and commands can be chained together to create smooth, longer movements.</p>
+          <div class="col-md-6">
+            <h4>Motor Control</h4>
+            <p>Using the clearpath motors in Pulse Burst Positioning mode, the ClearPath motors move a distance proportional to the number of pulses sent to the motor’s input. To move the motors a known distance, a variable number of pulses is sent to the motor, where each pulse moves the shaft 1/800th of a revolution. The ClearPath internally calculates trajectories and acceleration profiles, and commands can be chained together to create smooth, longer movements.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="img/electrical/rn41.jpg" class="sub-image">
+          </div>
+          <div class="col-md-6">
+            <img src="img/electrical/rn41.jpg" class="sub-image">
+          </div>
 
-          <p>We calibrated the ClearPath motors using the built-in software and tested different velocities and accelerations until we found a smooth one we were happy with. We initially used a high acceleration, but quickly learned that made the motion jerky because we are controlling with Pulse Burst, meaning many quickly commands are being sent in succession. When transitioning to a smaller acceleration, the motion was much smoother, which is important for attaining quality footage. </p>
+          <div class="col-md-6">
+            <p>We calibrated the ClearPath motors using the built-in software and tested different velocities and accelerations until we found a smooth one we were happy with. We initially used a high acceleration, but quickly learned that made the motion jerky because we are controlling with Pulse Burst, meaning many quickly commands are being sent in succession. When transitioning to a smaller acceleration, the motion was much smoother, which is important for attaining quality footage. </p>
+          </div>
 
-          <h4>Wireless Communications</h4>
-          <p>In the final setup, the motors will be mounted an unknown distance apart, making the design of a wired system difficult and non-optimal. Thus, Falcon uses bluetooth to control each of the node’s motors wirelessly. We used the RN41 Class 1 Bluetooth Modules to control each Arduino. These modules are high-power enough to maintain consistent and reliable communication at distances up to 100 meters. Each Arduino is addressed and controlled remotely using a serial connection over the Bluetooth protocol at a configured baud rate of 9600-115200.</p>
-
+          <div class="row">
+            <div class="col-md-8">
+              <h4>Wireless Communications</h4>
+              <p>In the final setup, the motors will be mounted an unknown distance apart, making the design of a wired system difficult and non-optimal. Thus, Falcon uses bluetooth to control each of the node’s motors wirelessly. We used the RN41 Class 1 Bluetooth Modules to control each Arduino. These modules are high-power enough to maintain consistent and reliable communication at distances up to 100 meters. Each Arduino is addressed and controlled remotely using a serial connection over the Bluetooth protocol at a configured baud rate of 9600-115200.</p>
+            </div>
+            <div class="col-md-4">
+              <img src="img/electrical/rn41.jpg" class="sub-image">
+            </div>
+          </div>
       </div>
+
+      <div>
+        <a href="https://github.com/phuston/falcon" class="sub-button">GitHub Repo</a>
+      </div>
+
+
     </div>
   </div>
 
@@ -103,11 +119,8 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script type="text/javascript" src="js/bootstrap.js"></script> 
 <script type="text/javascript" src="js/SmoothScroll.js"></script> 
-<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script> 
 <script type="text/javascript" src="js/jquery.isotope.js"></script> 
 <script type="text/javascript" src="js/jqBootstrapValidation.js"></script> 
-<script type="text/javascript" src="js/contact_me.js"></script> 
-<script type="text/javascript" src="js/owl.carousel.js"></script> 
 
 <!-- Javascripts
     ================================================== --> 
