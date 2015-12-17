@@ -83,22 +83,22 @@
           </div>
 
           <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-6">
               <h4>Python</h4>
               <p>Our Python code performs our control and navigation operations. Users can create paths or generate them from waypoints, and then calibrate and  ‘fly’ Falcon using the command line.</p>
               <h4>Scripted Connectivity</h4>
               <p>To create a smoother Linux user experience, we’ve created detailed documentation for setting up the connection with our Bluetooth modules, located on our Github repository. The provided Bluetooth configuration file, along with a Python method which automatically connects the user’s computer to the Bluetooth modules located on each node, ensure consistent and easy connection.  </p>
             </div>
-            <div class="col-md-4">
-              <img src="img/electrical/rn41.jpg" class="sub-image">
+            <div class="col-md-6">
+              <img src="img/software/FalconDiagramArduino.png" class="sub-diagram img-responsive">
             </div>
           </div>
 
           <div class="row">
-            <div class="col-md-4">
-              <img src="img/electrical/rn41.jpg" class="sub-image">
+            <div class="col-md-6">
+              <img src="img/software/FalconDiagramFlowPath.png" class="ssub-diagram img-responsive">
             </div>
-            <div class="col-md-8">
+            <div class="col-md-6">
               <h4>Control Scheme</h4>
               <p>The Skycam class’s go_path method uses the node length differences attribute of its path to communicate with the Arduino and instruct it to spool in or out specific amounts. We calculate these values by first calculating the distance between each node and a point for any given point along the loaded path. We then calculate the subsequent change in node wire length between each step, and iterate over these values to ‘fly’ the Falcon system, sending Bluetooth commands for each step. </p>
             </div>
@@ -109,9 +109,14 @@
               <h4>Path Generation</h4>
               <p>To implement our Waypoint control scheme, we allow the user to input an arbitrary number of waypoints they wish the camera to traverse. Our software uses Scipy’s interpolation library to generate a spline through the given coordinates, and in order to achieve a smooth flight path, we then need to recreate the spline as a list of equidistant points. We use a binary search and solver to track along our generated curve and determine appropriate coordinates. The distance, as well as the tolerance of our search, can be set by the user. Every path we create is stored in a Path object, which encodes a list of coordinates, as well as more useful information such as the node spool lengths, and change in node lengths for any given point. When a user attempts to initialize a new Path, our software also determines if any point falls outside of the physical boundaries of our system, and will initialize that Path as a null object, preventing a user from moving to an illegal location. </p>
             </div>
-            <div class="col-md-6">
-              <img src="img/electrical/flightpath.png" class="sub-image">
+              <div class="col-md-6">
+                <img src="img/electrical/flightpath.png" class="img-responsive">
+              </div>
+
+            <div class="col-md-12">
+              <img src="img/software/FalconDiagramFlowSkycam.png" class="img-responsive">
             </div>
+
           </div>
           <div class="col-md-12">
           <h4>Website Design</h4>
@@ -120,7 +125,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <a href="https://github.com/phuston/falcon" class="sub-button">GitHub Repo</a>
+          <a href="https://github.com/phuston/falcon" class="sub-button">Software/Firmware Repo</a>
         </div>
           <div class="col-md-6">
           <a href="https://github.com/keenanzucker/falcon_website" class="sub-button">Website Repo</a>
