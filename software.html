@@ -50,6 +50,7 @@
                 <li><a href="software.html">Software</a></li>
               </ul>
         </li>
+        <li><a href="gallery.html" class="page-scroll">Gallery</a></li>
         <li><a href="blog.html" class="page-scroll">Blog</a></li>
       </ul>
     </div>
@@ -123,51 +124,47 @@
             <div class="col-md-12 code-snippet">
             <h4>Simplified Python Script Running Flight Path</h4>
           <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">Skycam</span> <span style="color: #008800; font-weight: bold">import</span> Skycam, Path, distance
-<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #008800; font-weight: bold">import</span> pi, cos, sin
+          <span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #008800; font-weight: bold">import</span> pi, cos, sin
 
-cam <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">50</span>, <span style="color: #0000DD; font-weight: bold">70</span>, <span style="color: #0000DD; font-weight: bold">95</span>)
-a <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">154.25</span>
-b <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">157.5</span>
-c <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">138</span>
-zB <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">0.75</span>
-zC <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">3.0</span>
-skycam <span style="color: #333333">=</span> Skycam(a, b, c, zB, zC, cam)
+          cam <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">50</span>, <span style="color: #0000DD; font-weight: bold">70</span>, <span style="color: #0000DD; font-weight: bold">95</span>)
+          a <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">154.25</span>
+          b <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">157.5</span>
+          c <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">138</span>
+          zB <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">0.75</span>
+          zC <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">3.0</span>
+          skycam <span style="color: #333333">=</span> Skycam(a, b, c, zB, zC, cam)
 
-going_up <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>], cam[<span style="color: #0000DD; font-weight: bold">2</span>] <span style="color: #333333">-</span> i) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">20</span>)]
-going_down <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_up))
+          going_up <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>], cam[<span style="color: #0000DD; font-weight: bold">2</span>] <span style="color: #333333">-</span> i) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">20</span>)]
+          going_down <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_up))
 
-going_to <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #6600EE; font-weight: bold">1.5</span><span style="color: #333333">*</span>i, <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">10</span>)]
-going_fro <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_to))
+          going_to <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #6600EE; font-weight: bold">1.5</span><span style="color: #333333">*</span>i, <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">10</span>)]
+          going_fro <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_to))
 
-thetas <span style="color: #333333">=</span> [((pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>) <span style="color: #333333">+</span> (m<span style="color: #333333">*</span>pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">40</span>)) <span style="color: #008800; font-weight: bold">for</span> m <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">81</span>)]
-going_circle <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>cos(theta), cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>sin(theta), <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> theta <span style="color: #000000; font-weight: bold">in</span> thetas]
+          thetas <span style="color: #333333">=</span> [((pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>) <span style="color: #333333">+</span> (m<span style="color: #333333">*</span>pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">40</span>)) <span style="color: #008800; font-weight: bold">for</span> m <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">81</span>)]
+          going_circle <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>cos(theta), cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>sin(theta), <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> theta <span style="color: #000000; font-weight: bold">in</span> thetas]
 
-path <span style="color: #333333">=</span> going_up <span style="color: #333333">+</span> going_to <span style="color: #333333">+</span> going_circle <span style="color: #333333">+</span> going_fro <span style="color: #333333">+</span> going_down
-skycam<span style="color: #333333">.</span>load_path(path)
-skycam<span style="color: #333333">.</span>connect()
-skycam<span style="color: #333333">.</span>tighten()
-skycam<span style="color: #333333">.</span>go_path(skycam<span style="color: #333333">.</span>save_point)
-</pre></div>
+          path <span style="color: #333333">=</span> going_up <span style="color: #333333">+</span> going_to <span style="color: #333333">+</span> going_circle <span style="color: #333333">+</span> going_fro <span style="color: #333333">+</span> going_down
+          skycam<span style="color: #333333">.</span>load_path(path)
+          skycam<span style="color: #333333">.</span>connect()
+          skycam<span style="color: #333333">.</span>tighten()
+          skycam<span style="color: #333333">.</span>go_path(skycam<span style="color: #333333">.</span>save_point)
+          </pre></div>
           </div>
 
 
           <div class="col-md-12">
           <h4>Website Design</h4>
-          <p>This website, the one you are currently reading, was designed and coded from the team. We used the Bootstrap framework to make it responsive for your viewing pleasure on any device! </p>
+          <p>This website, the one you are currently reading, was designed, handcrafted, and written with love from the team. We utilized the Bootstrap framework to make it (almost completely) responsive for your viewing pleasure on any device! We also featured iframes to embed Medium blog posts, Google Sheets, code snippets, and interactive CAD renderings. Please enjoy!</p>
           </div>
-
-
-          
-
 
           </div>
       </div>
       <div class="row">
         <div class="col-md-6">
-          <a href="https://github.com/phuston/falcon" class="sub-button">Software/Firmware Repo</a>
+          <a target="_blank" href="https://github.com/phuston/falcon" class="sub-button">Software/Firmware Repo</a>
         </div>
           <div class="col-md-6">
-          <a href="https://github.com/keenanzucker/falcon_website" class="sub-button">Website Repo</a>
+          <a target="_blank" href="https://github.com/keenanzucker/falcon_website" class="sub-button">Website Repo</a>
         </div>
         </div>
     </div>
