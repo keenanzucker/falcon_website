@@ -116,18 +116,49 @@
               <p>To implement our Waypoint control scheme, we allow the user to input an arbitrary number of waypoints they wish the camera to traverse. Our software uses Scipy’s interpolation library to generate a spline through the given coordinates, and in order to achieve a smooth flight path, we then need to recreate the spline as a list of equidistant points. We use a binary search and solver to track along our generated curve and determine appropriate coordinates. The distance, as well as the tolerance of our search, can be set by the user. Every path we create is stored in a Path object, which encodes a list of coordinates, as well as more useful information such as the node spool lengths, and change in node lengths for any given point. When a user attempts to initialize a new Path, our software also determines if any point falls outside of the physical boundaries of our system, and will initialize that Path as a null object, preventing a user from moving to an illegal location. </p>
             </div>
 
-
             <div class="col-md-12">
               <img src="img/software/FalconDiagramFlowSkycam.png" class="img-responsive">
             </div>
 
+            <div class="col-md-12 code-snippet">
+            <h4>Simplified Python Script Running Flight Path</h4>
+          <!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">Skycam</span> <span style="color: #008800; font-weight: bold">import</span> Skycam, Path, distance
+<span style="color: #008800; font-weight: bold">from</span> <span style="color: #0e84b5; font-weight: bold">numpy</span> <span style="color: #008800; font-weight: bold">import</span> pi, cos, sin
+
+cam <span style="color: #333333">=</span> (<span style="color: #0000DD; font-weight: bold">50</span>, <span style="color: #0000DD; font-weight: bold">70</span>, <span style="color: #0000DD; font-weight: bold">95</span>)
+a <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">154.25</span>
+b <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">157.5</span>
+c <span style="color: #333333">=</span> <span style="color: #0000DD; font-weight: bold">138</span>
+zB <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">0.75</span>
+zC <span style="color: #333333">=</span> <span style="color: #6600EE; font-weight: bold">3.0</span>
+skycam <span style="color: #333333">=</span> Skycam(a, b, c, zB, zC, cam)
+
+going_up <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>], cam[<span style="color: #0000DD; font-weight: bold">2</span>] <span style="color: #333333">-</span> i) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">20</span>)]
+going_down <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_up))
+
+going_to <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>], cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #6600EE; font-weight: bold">1.5</span><span style="color: #333333">*</span>i, <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">10</span>)]
+going_fro <span style="color: #333333">=</span> <span style="color: #007020">list</span>(<span style="color: #007020">reversed</span>(going_to))
+
+thetas <span style="color: #333333">=</span> [((pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">2</span>) <span style="color: #333333">+</span> (m<span style="color: #333333">*</span>pi<span style="color: #333333">/</span><span style="color: #0000DD; font-weight: bold">40</span>)) <span style="color: #008800; font-weight: bold">for</span> m <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">xrange</span>(<span style="color: #0000DD; font-weight: bold">81</span>)]
+going_circle <span style="color: #333333">=</span> [(cam[<span style="color: #0000DD; font-weight: bold">0</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>cos(theta), cam[<span style="color: #0000DD; font-weight: bold">1</span>] <span style="color: #333333">+</span> <span style="color: #0000DD; font-weight: bold">15</span><span style="color: #333333">*</span>sin(theta), <span style="color: #0000DD; font-weight: bold">75</span>) <span style="color: #008800; font-weight: bold">for</span> theta <span style="color: #000000; font-weight: bold">in</span> thetas]
+
+path <span style="color: #333333">=</span> going_up <span style="color: #333333">+</span> going_to <span style="color: #333333">+</span> going_circle <span style="color: #333333">+</span> going_fro <span style="color: #333333">+</span> going_down
+skycam<span style="color: #333333">.</span>load_path(path)
+skycam<span style="color: #333333">.</span>connect()
+skycam<span style="color: #333333">.</span>tighten()
+skycam<span style="color: #333333">.</span>go_path(skycam<span style="color: #333333">.</span>save_point)
+</pre></div>
           </div>
+
+
           <div class="col-md-12">
           <h4>Website Design</h4>
           <p>This website, the one you are currently reading, was designed and coded from the team. We used the Bootstrap framework to make it responsive for your viewing pleasure on any device! </p>
           </div>
-          <div class="col-md-12 code-snippet">
-          <!-- SNIPPET HERE -->
+
+
+          
+
 
           </div>
       </div>
