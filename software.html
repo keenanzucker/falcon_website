@@ -67,7 +67,10 @@
     <div class="subsystem-container">
       <div class="section-title">
         <h2>Specifications</h2>
+        <p>Falcon’s software is equal parts geometric calculation code and streamlined communication script.</p>
+
           <div class="col-md-12">
+            <h3>Firmware</h3>
             <h4>Arduino C</h4>
             <p>Our Arduino program acts as the interpreter between the computer and the servo motors. It opens bluetooth communication, which allows our Python script to send commands wirelessly, and then translates those commands into pulsing signals that our servo motors can interpret.</p>
           </div>
@@ -82,22 +85,32 @@
           <div class="row">
             <div class="col-md-8">
               <h4>Python</h4>
-              <p>Our Python code performs all of our control and navigation operations. We have mapped user input to a number of methods which perform.</p>
+              <p>Our Python code performs our control and navigation operations. Users can create paths or generate them from waypoints, and then calibrate and  ‘fly’ Falcon using the command line.</p>
               <h4>Scripted Connectivity</h4>
-              <p>To create a smoother Linux user experience, we’ve created a Bluetooth configuration file along with a Python method automatically be run to connect a user’s computer to the Bluetooth modules located on each node. </p>
+              <p>To create a smoother Linux user experience, we’ve created detailed documentation for setting up the connection with our Bluetooth modules, located on our Github repository. The provided Bluetooth configuration file, along with a Python method which automatically connects the user’s computer to the Bluetooth modules located on each node, ensure consistent and easy connection.  </p>
             </div>
             <div class="col-md-4">
               <img src="img/electrical/rn41.jpg" class="sub-image">
             </div>
           </div>
-          
+
           <div class="row">
-             <div class="col-md-6">
+            <div class="col-md-4">
               <img src="img/electrical/rn41.jpg" class="sub-image">
             </div>
+            <div class="col-md-8">
+              <h4>Control Scheme</h4>
+              <p>The Skycam class’s go_path method uses the node length differences attribute of its path to communicate with the Arduino and instruct it to spool in or out specific amounts. We calculate these values by first calculating the distance between each node and a point for any given point along the loaded path. We then calculate the subsequent change in node wire length between each step, and iterate over these values to ‘fly’ the Falcon system, sending Bluetooth commands for each step. </p>
+            </div>
+          </div>
+          
+          <div class="row">
             <div class="col-md-6">
               <h4>Path Generation</h4>
               <p>To implement our Waypoint control scheme, we allow the user to input an arbitrary number of waypoints they wish the camera to traverse. Our software uses Scipy’s interpolation library to generate a spline through the given coordinates, and in order to achieve a smooth flight path, we then need to recreate the spline as a list of equidistant points. We use a binary search and solver to track along our generated curve and determine appropriate coordinates. The distance, as well as the tolerance of our search, can be set by the user. Every path we create is stored in a Path object, which encodes a list of coordinates, as well as more useful information such as the node spool lengths, and change in node lengths for any given point. When a user attempts to initialize a new Path, our software also determines if any point falls outside of the physical boundaries of our system, and will initialize that Path as a null object, preventing a user from moving to an illegal location. </p>
+            </div>
+            <div class="col-md-6">
+              <img src="img/electrical/flightpath.png" class="sub-image">
             </div>
           </div>
           <div class="col-md-12">
