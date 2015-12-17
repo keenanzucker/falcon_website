@@ -269,7 +269,7 @@ img.img-circle.team-img {
 }
 
 .sub-image {
-	/*padding: 5%;*/
+	padding: 5%;
 	width: 300px;
 	height: auto;
 }
@@ -286,6 +286,13 @@ img.img-circle.team-img {
 	padding-left: 5%;
 	padding-right: 5%;
 	font-size: 24px;
+}
+
+.circuit-img {
+	padding-top: 5%;
+	text-align: center;
+	width: 80%;
+	height: auto;
 }
 
 /*Blog Pages*/

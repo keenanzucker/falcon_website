@@ -70,19 +70,16 @@
     <div class="subsystem-container">
       <div class="section-title">
         <h2>Specifications</h2>
-          <p>The electrical system of Falcon is composed of 2 main components - motor control and wireless communications. </p>
+          <p>The electrical system of Falcon is composed of 2 main components - motor control and wireless communications. See the fritzing schematic at the bottom of the page </p>
           <div class="col-md-6">
             <h4>Motor Control</h4>
             <p>Using the clearpath motors in Pulse Burst Positioning mode, the ClearPath motors move a distance proportional to the number of pulses sent to the motor’s input. To move the motors a known distance, a variable number of pulses is sent to the motor, where each pulse moves the shaft 1/800th of a revolution. The ClearPath internally calculates trajectories and acceleration profiles, and commands can be chained together to create smooth, longer movements.</p>
           </div>
           <div class="col-md-6">
-            <img src="img/electrical/rn41.jpg" class="sub-image">
-          </div>
-          <div class="col-md-6">
-            <img src="img/electrical/rn41.jpg" class="sub-image">
+            <img src="img/electrical/topView.jpeg" class="sub-image img-responsive">
           </div>
 
-          <div class="col-md-6">
+          <div class="col-md-12">
             <p>We calibrated the ClearPath motors using the built-in software and tested different velocities and accelerations until we found a smooth one we were happy with. We initially used a high acceleration, but quickly learned that made the motion jerky because we are controlling with Pulse Burst, meaning many quickly commands are being sent in succession. When transitioning to a smaller acceleration, the motion was much smoother, which is important for attaining quality footage. </p>
           </div>
 
@@ -92,14 +89,17 @@
               <p>In the final setup, the motors will be mounted an unknown distance apart, making the design of a wired system difficult and non-optimal. Thus, Falcon uses bluetooth to control each of the node’s motors wirelessly. We used the RN41 Class 1 Bluetooth Modules to control each Arduino. These modules are high-power enough to maintain consistent and reliable communication at distances up to 100 meters. Each Arduino is addressed and controlled remotely using a serial connection over the Bluetooth protocol at a configured baud rate of 9600-115200.</p>
             </div>
             <div class="col-md-4">
-              <img src="img/electrical/rn41.jpg" class="sub-image">
+              <img src="img/electrical/rn41.jpg" class="sub-image img-responsive">
             </div>
           </div>
       </div>
-
       <div>
         <a href="https://github.com/phuston/falcon" class="sub-button">GitHub Repo</a>
       </div>
+      <div class="col-md-12">
+          <img src="img/electrical/circuit.png" class="circuit-img img-responsive">
+      </div>
+
 
 
     </div>
